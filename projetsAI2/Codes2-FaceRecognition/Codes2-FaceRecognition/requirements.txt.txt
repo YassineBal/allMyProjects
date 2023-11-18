@@ -1,0 +1,7 @@
+conda create -n myenv python=3.9
+conda activate myenv
+
+pip install cmake
+conda install -c conda-forge dlib
+pip install openvc-python
+pip install face-recognition
