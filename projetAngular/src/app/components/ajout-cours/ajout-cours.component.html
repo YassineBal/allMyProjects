@@ -1,0 +1,42 @@
+<form (ngSubmit)="saveCours()" ngNativeValidate>
+  <div class="form-group">
+    <label class="h3" for="brand">Module</label>
+    <input
+    type="text"
+    class="form-control"
+    id="module"
+    required
+    [(ngModel)]="cours.module"
+    name="module"/>
+  </div>
+  <div class="form-group">
+    <label class="h3" for="brand">Professeur :</label>
+    <input
+    type="text"
+    class="form-control"
+    id="professeur"
+    required
+    [(ngModel)]="cours.professeur"
+    name="professeur"/>
+  </div>
+  <div class="form-group">
+    <label class="h3" for="description">Durree :</label>
+    <input
+    type="text"
+    class="form-control"
+    id="duree"
+    required
+    [(ngModel)]="cours.duree" name="duree" />
+  </div>
+  <div class="form-group">
+    <label class="h3" for="price">Prix :</label>
+    <input
+    type="text"
+    class="form-control"
+    id="prix"
+    required
+    [(ngModel)]="cours.prix"
+    name="prix"/>
+  </div>
+  <button type="submit" class="btn btn-sucess" style="background-color: green; margin-top: 20px;">Envoyer</button>
+</form>

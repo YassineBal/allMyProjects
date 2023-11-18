@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Liste des Cours</h1>
+  <div class="row mt-5">
+    <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let cour of cours;">
+      <div class="card md-5" style="width: 18rem; margin-top: 20px;border-radius: 5px;">
+        <h5 class="card-title">Module :{{cour.module}}</h5>
+        <p class="card-text">Professeur : {{cour.professeur}}</p>
+        <p class="card-text">Durree : {{cour.duree}}</p>
+        <p class="card-text">Prix : {{cour.prix}}</p>
+        <p class="card-text d-none">id : {{cour._id}}</p>
+        <button [routerLink]="['/modif',cour._id]" style="background-color: rgba(221, 96, 18, 0.842); color: black;">Editer</button>
+      </div>
+    </div>
+  </div>
+</div>
