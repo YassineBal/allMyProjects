@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/style.css">
+    <title><%=pageTitle%></title>
+</head>
+<body>
+    <%-include('./partials/menu')%>
+    <div>
+    <table>
+     <thead>
+        <tr>
+            <th>Espece</th>
+            <th>Sexe</th>
+            <th>Nom</th>
+        </tr>
+     </thead>
+     <tbody>
+            <% print.forEach(function(animal){ %>
+                <tr>
+                    <td><%= animal.espece %></td>
+                    <td><%= animal.sexe %></td>
+                    <td><%= animal.nom %></td>
+                </tr>
+            <% }) %>
+     </tbody>
+    </table>
+
+</div>
+<div>
+     <h1 class="tite2" > Voici la liste numerotee des noms seulement </h1>
+
+     <ol>
+        <% print.forEach(function(animal){ %>
+            
+                <li><%= animal.nom %></li>
+            
+        <% }) %>
+     </ol>
+
+    <%-include('./partials/footer')%>
+</div>
+</body>
+</html>
